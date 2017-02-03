@@ -1,0 +1,27 @@
+{
+  "name": "email-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lcantillo00/email-server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lcantillo00/email-server/issues"
+  },
+  "homepage": "https://github.com/lcantillo00/email-server#readme",
+  "dependencies": {
+    "express": "^4.14.1",
+    "nodemailer": "^3.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
