@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Enter the person's email</h2>
+    <input id="email-address">
+    <button id="submit">Send</button>
+
+    <script src="http://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script>
+        $('#submit').click(function() {
+            $.ajax({
+                url: '/emailresume',
+                method: 'POST',
+                success: function(resp) {
+                    console.log(resp);
+                    alert('your email is already send');
+                },
+                data: {
+                    destination_email: $('#email-address').val()
+                }
+            });
+        })
+    </script>
+
+</body>
+
+</html>
